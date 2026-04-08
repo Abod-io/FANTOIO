@@ -1,165 +1,61 @@
-/* إعدادات الخط والألوان الأساسية */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
+:root {
+    --bg-dark: #0a0b10;
+    --neon-green: #00ff88;
+    --glass-white: rgba(255, 255, 255, 0.05);
 }
 
 body {
-    background-color: #1a1a1a; /* خلفية داكنة جداً */
-    color: #ffffff;
-    line-height: 1.6;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                      url('https://media.istockphoto.com/id/1443022226/photo/black-leather-texture-background.webp?b=1&s=170667a&w=0&k=20&c=JluczfcCJXPyUSgATnnnuA33X2Rma_pOfDif9LdTb9Y='); /* خلفية اختيارية لماينكرافت */
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: var(--bg-dark);
+    color: white;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* الهيدر / القائمة العلوية */
-header {
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 20px 10%;
+.navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid #2ecc71; /* خط أخضر مثل لون ماينكرافت */
+    padding: 20px 50px;
+    background: var(--glass-white);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
 }
 
-.logo h1 {
+.logo {
     font-size: 24px;
-    letter-spacing: 1px;
-}
-
-.dot-com {
-    color: #2ecc71;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
     font-weight: bold;
-    transition: 0.3s;
+    letter-spacing: 2px;
 }
 
-nav ul li a:hover, .active {
-    color: #2ecc71;
-}
+.logo span { color: var(--neon-green); }
 
-/* منطقة المتجر */
-.store-container {
-    padding: 60px 10%;
+.nav-links { list-style: none; display: flex; gap: 25px; }
+
+.nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+
+.nav-links a:hover { color: var(--neon-green); }
+
+.neon-text {
+    font-size: 3rem;
     text-align: center;
-}
-
-.section-title {
-    font-size: 32px;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px #000;
-}
-
-/* تنسيق بطاقات الرتب (المحاذاة) */
-.ranks-grid {
-    display: flex;
-    justify-content: center; /* محاذاة في المنتصف */
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* بطاقة الـ VIP */
-.rank-card {
-    background: rgba(30, 30, 30, 0.9);
-    border: 2px solid #333;
-    border-radius: 15px;
-    padding: 30px;
-    width: 320px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.rank-card:hover {
-    transform: translateY(-10px); /* تأثير الارتفاع عند مرور الماوس */
-}
-
-/* تأثير خاص لرتبة VIP (توهج أخضر) */
-.vip {
-    border-color: #2ecc71;
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
-}
-
-.vip:hover {
-    box-shadow: 0 0 40px rgba(46, 204, 113, 0.5);
-}
-
-.rank-header img {
-    width: 80px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.rank-header h3 {
-    font-size: 28px;
-    color: #2ecc71;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* قائمة المميزات */
-.features {
-    list-style: none;
-    text-align: right;
-    margin-bottom: 30px;
-}
-
-.features li {
-    padding: 8px 0;
-    border-bottom: 1px solid #333;
-    font-size: 14px;
-}
-
-/* السعر والزر */
-.price {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #f1c40f; /* لون ذهبي للسعر */
-}
-
-.buy-btn {
-    background-color: #2ecc71;
     color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
+    text-shadow: 0 0 20px var(--neon-green);
+    margin-top: 100px;
+}
+
+.main-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
     cursor: pointer;
-    width: 100%;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: 0.4s;
 }
 
-.buy-btn:hover {
-    background-color: #27ae60;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* التذييل */
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #111;
-    margin-top: 50px;
-    font-size: 12px;
-    color: #666;
-
+.main-btn:hover {
+    background: var(--neon-green);
+    color: black;
+    box-shadow: 0 0 30px var(--neon-green);
 }
