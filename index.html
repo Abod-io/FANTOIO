@@ -3,54 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر سيرفر ماينكرافت | شراء الرتب</title>
+    <title>IO System</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <header>
-        <div class="logo">
-            <h1>fantoio <span class="dot-com">.aternos.me</span></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#" class="active">المتجر</a></li>
-                <li><a href="#">القوانين</a></li>
+        <nav class="navbar">
+            <div class="logo">IO<span>SYSTEM</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="login.html" id="loginBtn">دخول</a></li>
             </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
         </nav>
     </header>
 
-    <main class="store-container">
-        <h2 class="section-title">اختر رتبتك وابدأ المغامرة!</h2>
-        
-        <div class="ranks-grid">
-            
-            <div class="rank-card vip">
-                <div class="rank-header">
-                    <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/3f29435ea5ce2193abf84c77f95fdf937ba589de.png" alt="VIP Icon">
-                    <h3>رتبة VIP</h3>
-                </div>
-                <ul class="features">
-                    <li>⭐ لون أخضر مميز في الشات</li>
-                    <li>🚀 القدرة على الطيران في اللوبي</li>
-                    <li>💎 5 صناديق عشوائية شهرياً</li>
-                    <li>⚔️ الدخول للسيرفر حتى لو كان ممتلئاً</li>
-                </ul>
-                <div class="price">9.99$</div>
-                <button class="buy-btn">شراء الآن</button>
-            </div>
-
-            </div>
+    <main>
+        <section class="hero">
+            <h1 class="neon-text">مستقبل البرمجة والألعاب</h1>
+            <p>مشاريع LifeVerse و Roblox الأصلية في مكان واحد.</p>
+            <button class="main-btn">استكشف المنتجات</button>
+        </section>
     </main>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 - سيرفر ماينكرافت</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-
